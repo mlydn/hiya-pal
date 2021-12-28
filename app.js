@@ -2,10 +2,6 @@
 const express = require('express');
 // Express Initialize
 const app = express();
-const port = 8000;
-app.listen(port,()=> {
-  console.log('listen port 8000');
-})
 
 //create api
 app.get('/hiya_pal', (req,res)=>{
@@ -13,5 +9,11 @@ app.get('/hiya_pal', (req,res)=>{
 })
 
 app.get('/pal/:name', (req, res)=>{
-  res.send('hiya ' + req.params.name);
+  res.send('Hiya ' + capitalizeFirstLetter(req.params.name) + '!');
 })
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+module.exports = app
