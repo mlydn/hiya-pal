@@ -8,6 +8,7 @@ describe('GET Endpoints', () => {
     expect(res.statusCode).toEqual(200)
     expected = "{\"message\":\"Hiya Pal!\"}"
     expect(res.text).toEqual(expected)
+    expect(res.type).toEqual('application/json')
   })
 
   it('should GET a hiya bob', async () => {
@@ -16,5 +17,6 @@ describe('GET Endpoints', () => {
     expect(res.statusCode).toEqual(200)
     expected = "{\"message\":\"Hiya Bob!\"}"
     expect(res.text).toEqual(expected)
+    expect(res.type).toEqual('application/json')
   })
 })
