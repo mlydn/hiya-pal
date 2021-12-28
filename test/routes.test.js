@@ -6,13 +6,15 @@ describe('GET Endpoints', () => {
     const res = await request(app)
       .get('/hiya_pal')
     expect(res.statusCode).toEqual(200)
-    expect(res.text).toEqual('Hiya Pal!')
+    expected = "{\"message\":\"Hiya Pal!\"}"
+    expect(res.text).toEqual(expected)
   })
 
   it('should GET a hiya bob', async () => {
     const res = await request(app)
       .get('/pal/bob')
     expect(res.statusCode).toEqual(200)
-    expect(res.text).toEqual('Hiya Bob!')
+    expected = "{\"message\":\"Hiya Bob!\"}"
+    expect(res.text).toEqual(expected)
   })
 })

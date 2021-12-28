@@ -2,14 +2,16 @@
 const express = require('express');
 // Express Initialize
 const app = express();
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 
 //create api
 app.get('/hiya_pal', (req,res)=>{
-  res.send('Hiya Pal!');
+  res.json({ message: 'Hiya Pal!' });
 })
 
 app.get('/pal/:name', (req, res)=>{
-  res.send('Hiya ' + capitalizeFirstLetter(req.params.name) + '!');
+  res.json({ message: 'Hiya ' + capitalizeFirstLetter(req.params.name) + '!'});
 })
 
 function capitalizeFirstLetter(string) {
