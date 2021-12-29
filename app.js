@@ -14,6 +14,10 @@ app.get('/pal/:name', (req, res) => {
   res.json({ message: 'Hiya ' + capitalizeFirstLetter(req.params.name) + '!' })
 })
 
+app.get('/health', (req, res) => {
+  res.json({ status: 'Available' })
+})
+
 function capitalizeFirstLetter (string) {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }

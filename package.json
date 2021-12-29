@@ -4,7 +4,7 @@
   "description": "hiya pal!",
   "main": "app.js",
   "scripts": {
-    "test": "jest --detectOpenHandles"
+    "test": "standard && jest --detectOpenHandles"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,12 @@
   },
   "devDependencies": {
     "jest": "^27.4.5",
-    "supertest": "^6.1.6"
+    "supertest": "^6.1.6",
+    "standard": "*"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
   }
 }
