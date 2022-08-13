@@ -1,3 +1,6 @@
+require('dotenv').config()
+require('newrelic')
+
 const app = require('./app.js')
 const port = 8000
 const host = '0.0.0.0'

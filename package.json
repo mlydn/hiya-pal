@@ -17,12 +17,14 @@
   },
   "homepage": "https://github.com/mlydn/hiya-pal#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "dotenv": "^16.0.1",
+    "express": "^4.17.2",
+    "newrelic": "^9.0.0"
   },
   "devDependencies": {
     "jest": "^27.4.5",
-    "supertest": "^6.1.6",
-    "standard": "*"
+    "standard": "*",
+    "supertest": "^6.1.6"
   },
   "standard": {
     "env": [
