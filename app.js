@@ -15,6 +15,7 @@ app.get('/pal/:name', (req, res) => {
 })
 
 app.get('/health', (req, res) => {
+  // throw new Error('uh oh unhealthy!')
   res.json({ status: 'Available' })
 })
 
